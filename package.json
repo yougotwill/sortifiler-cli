@@ -1,0 +1,28 @@
+{
+  "name": "sortifiler-cli",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Get your files sorted from the command line.",
+  "repository": "yougotwill/sortifiler-cli",
+  "main": "cli.js",
+  "bin": {
+    "sortifiler": "./cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "William Grant <yougotwill94@gmail.com> (https://yougotwill@github.io/)",
+  "keywords": [
+    "productivity",
+    "sorting",
+    "files",
+    "folders",
+    "filesystem",
+    "command line",
+    "cli"
+  ],
+  "dependencies": {
+    "meow": "^6.0.0",
+    "sortifiler": "^0.1.0"
+  }
+}

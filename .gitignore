@@ -1,0 +1,6 @@
+# keep projects ide agnostic
+*.sublime-project
+*.sublime-workspace
+
+# Dependency directories
+node_modules/
