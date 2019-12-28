@@ -11,7 +11,7 @@ Everyday you look at your *Desktop/Downloads* folder and think, "Damn I need to 
 
 That feeling is why this CLI now exists. 😆
 
-SortiFiler classifies files and folders and moves them into *\_Type* folders for easy access at the root of your chosen directory. 🗃
+SortiFiler CLI classifies files and folders and moves them into *\_Type* folders for easy access at the root of your chosen directory. 🗃
 
 ## Installation
 
@@ -21,7 +21,7 @@ If you are looking for the SortiFiler API then check out [SortiFiler](https://gi
 
 ## Usage
 
-```bash
+```
 sortifiler --help
 
   Usage
