@@ -9,7 +9,6 @@ const cli = meow(`
     $ sortfiler <path>
 
   Options
-    --meta, -m     Includes meta files when sorting.
     --files, -f    Sort all files in a given path.
     --folders, -F  Sort all folders in a given path
     no flags,      Sorts all files and folders in a given path.
@@ -31,12 +30,6 @@ const cli = meow(`
     $ sortifiler ~/Downloads --folders
     Sorting folders ...
     Sorted ✔
-
-    Sort all folders and meta files in the current directory
-    $ sortifiler . --folders --meta
-    Looking for meta files ...
-    Sorting folders ...
-    Sorted ✔
 `, {
   flags: {
     help: {
@@ -46,10 +39,6 @@ const cli = meow(`
     version: {
       type: 'boolean',
       alias: 'v'
-    },
-    meta: {
-      type: 'boolean',
-      alias: 'm'
     },
     files: {
       type: 'boolean',
@@ -63,20 +52,15 @@ const cli = meow(`
 });
 
 const flags = cli.unnormalizedFlags;
-let metaFiles = false;
-if (flags.meta || flags.m) {
-  metaFiles = true;
-  console.log('Looking for meta files ...');
-}
 if (flags.files || flags.f) {
   console.log('Sorting files ...');
-  sortifiler.sortFiles(cli.input[0], metaFiles);
+  sortifiler.sortFiles(cli.input[0]);
 } else if (flags.folders || flags.F) {
   console.log('Sorting folders ...');
-  sortifiler.sortFolders(cli.input[0], metaFiles);
+  sortifiler.sortFolders(cli.input[0]);
 } else {
   console.log('Sorting ...');
-  sortifiler.sortAll(cli.input[0], metaFiles);
+  sortifiler.sortAll(cli.input[0]);
 }
 
 console.log('Sorted ✔');

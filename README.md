@@ -1,4 +1,4 @@
-# SortiFiler CLI
+# Sortifiler CLI
 
 > Get your files sorted from the command line. 📚🗂🖥
 
@@ -11,13 +11,13 @@ Everyday you look at your *Desktop/Downloads* folder and think, "Damn I need to 
 
 That feeling is why this CLI now exists. 😆
 
-SortiFiler CLI classifies files and folders and moves them into *\_Type* folders for easy access at the root of your chosen directory. 🗃
+Sortifiler CLI classifies files and folders and moves them into *\_Type* folders for easy access at the root of your chosen directory. 🗃
 
 ## Installation
 
-To install SortiFiler CLI enter `npm -g install sortifiler-cli` into your terminal.
+To install Sortifiler CLI enter `npm -g install sortifiler-cli` into your terminal.
 
-If you are looking for the SortiFiler API then check out [SortiFiler](https://github.com/yougotwill/sortifiler)!
+If you are looking for the Sortifiler API then check out [Sortifiler](https://github.com/yougotwill/sortifiler)!
 
 ## Usage
 
@@ -28,7 +28,6 @@ sortifiler --help
     $ sortfiler <path>
 
   Options
-    --meta, -m     Includes meta files when sorting.
     --files, -f    Sort all files in a given path.
     --folders, -F  Sort all folders in a given path
     no flags,      Sorts all files and folders in a given path.
@@ -48,12 +47,6 @@ sortifiler --help
 
     Sort all folders in the Downloads folder
     $ sortifiler ~/Downloads --folders
-    Sorting folders ...
-    Sorted ✔
-
-    Sort all folders and meta files in the current directory
-    $ sortifiler . --folders --meta
-    Looking for meta files ...
     Sorting folders ...
     Sorted ✔
 ```
@@ -76,7 +69,7 @@ sortifiler --help
 | _Web           | ".html", ".css", ".js", ".htm"           |
 | _Zipped        | ".zip", ".rar", ".7z", ".tar.gz", ".tar", ".gz", "*.unitypackage", "*.prefab", ".fbx" |
 
-- **Note:** This list maybe outdated please check out [SortiFiler](https://github.com/yougotwill/sortifiler) for the latest info.
+- **Note:** This list maybe outdated please check out [Sortifiler](https://github.com/yougotwill/sortifiler) for the latest info.
 
 ## Development
 
