@@ -98,4 +98,4 @@ sortifiler --help
 
 ## License
 
-[MIT](LICENSE)
+[GNU GPLv3](LICENSE)
