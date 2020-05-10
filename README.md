@@ -82,7 +82,7 @@ sortifiler --help
 
 You can customise the whitelist and sorting rules used by Sortifiler. Create a custom JSON file and then pass the file path to the `config` flag.
 
-Example: sortfiler.json
+Example: sortifiler.json
 
 ```json
 {
