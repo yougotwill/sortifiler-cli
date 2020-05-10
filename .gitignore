@@ -1,3 +1,7 @@
+# dev files
+TODO.md
+downloads 
+
 # keep projects ide agnostic
 *.sublime-project
 *.sublime-workspace

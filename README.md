@@ -1,4 +1,4 @@
-# SortiFiler CLI
+# Sortifiler CLI
 
 > Get your files sorted from the command line. 📚🗂🖥
 
@@ -11,13 +11,13 @@ Everyday you look at your *Desktop/Downloads* folder and think, "Damn I need to 
 
 That feeling is why this CLI now exists. 😆
 
-SortiFiler CLI classifies files and folders and moves them into *\_Type* folders for easy access at the root of your chosen directory. 🗃
+Sortifiler CLI classifies files and folders and moves them into *\_Type* folders for easy access at the root of your chosen directory. 🗃
 
 ## Installation
 
-To install SortiFiler CLI enter `npm -g install sortifiler-cli` into your terminal.
+To install Sortifiler CLI enter `npm -g install sortifiler-cli` into your terminal.
 
-If you are looking for the SortiFiler API then check out [SortiFiler](https://github.com/yougotwill/sortifiler)!
+If you are looking for the Sortifiler API then check out [Sortifiler](https://github.com/yougotwill/sortifiler)!
 
 ## Usage
 
@@ -28,12 +28,12 @@ sortifiler --help
     $ sortfiler <path>
 
   Options
-    --meta, -m     Includes meta files when sorting.
-    --files, -f    Sort all files in a given path.
-    --folders, -F  Sort all folders in a given path
-    no flags,      Sorts all files and folders in a given path.
+    no flags,                     Sorts all files and folders in a given path.
+    --files, -f                   Sort all files in a given path.
+    --folders, -F                 Sort all folders in a given path.
+    --config, -c <filePath>       Use a custom configuration file.
 
-  <path> is the file path to directory that needs sorting
+  <path> is the path to directory that needs sorting
 
   Examples
     Sort all files and folders in the Downloads folder.
@@ -51,9 +51,9 @@ sortifiler --help
     Sorting folders ...
     Sorted ✔
 
-    Sort all folders and meta files in the current directory
-    $ sortifiler . --folders --meta
-    Looking for meta files ...
+    Sort all files and folders on the Desktop using a custom configuration file
+    $ sortifiler ~/Desktop --config ~/sortifiler.json
+    Loaded configuration ✔
     Sorting folders ...
     Sorted ✔
 ```
@@ -76,7 +76,23 @@ sortifiler --help
 | _Web           | ".html", ".css", ".js", ".htm"           |
 | _Zipped        | ".zip", ".rar", ".7z", ".tar.gz", ".tar", ".gz", "*.unitypackage", "*.prefab", ".fbx" |
 
-- **Note:** This list maybe outdated please check out [SortiFiler](https://github.com/yougotwill/sortifiler) for the latest info.
+- **Note:** This list maybe outdated please check out [Sortifiler](https://github.com/yougotwill/sortifiler) for the latest info.
+
+## Custom Configuration
+
+You can customise the whitelist and sorting rules used by Sortifiler. Create a custom JSON file and then pass the file path to the `config` flag.
+
+Example: sortfiler.json
+
+```json
+{
+  "whitelist": ["fileToIgnore.txt"],
+  "rules": {
+    "_Documents": ["*.pdf"],
+    "_Music": ["*.mp3"]
+  }
+}
+```
 
 ## Development
 
@@ -98,4 +114,4 @@ sortifiler --help
 
 ## License
 
-[MIT](LICENSE)
+[GNU GPLv3](LICENSE)
