@@ -28,11 +28,12 @@ sortifiler --help
     $ sortfiler <path>
 
   Options
-    --files, -f    Sort all files in a given path.
-    --folders, -F  Sort all folders in a given path
-    no flags,      Sorts all files and folders in a given path.
+    no flags,                     Sorts all files and folders in a given path.
+    --files, -f                   Sort all files in a given path.
+    --folders, -F                 Sort all folders in a given path.
+    --config, -c <filePath>       Use a custom configuration file.
 
-  <path> is the file path to directory that needs sorting
+  <path> is the path to directory that needs sorting
 
   Examples
     Sort all files and folders in the Downloads folder.
@@ -47,6 +48,12 @@ sortifiler --help
 
     Sort all folders in the Downloads folder
     $ sortifiler ~/Downloads --folders
+    Sorting folders ...
+    Sorted ✔
+
+    Sort all files and folders on the Desktop using a custom configuration file
+    $ sortifiler ~/Desktop --config ~/sortifiler.json
+    Loaded configuration ✔
     Sorting folders ...
     Sorted ✔
 ```
@@ -70,6 +77,22 @@ sortifiler --help
 | _Zipped        | ".zip", ".rar", ".7z", ".tar.gz", ".tar", ".gz", "*.unitypackage", "*.prefab", ".fbx" |
 
 - **Note:** This list maybe outdated please check out [Sortifiler](https://github.com/yougotwill/sortifiler) for the latest info.
+
+## Custom Configuration
+
+You can customise the whitelist and sorting rules used by Sortifiler. Create a custom JSON file and then pass the file path to the `config` flag.
+
+Example: sortfiler.json
+
+```json
+{
+  "whitelist": ["fileToIgnore.txt"],
+  "rules": {
+    "_Documents": ["*.pdf"],
+    "_Music": ["*.mp3"]
+  }
+}
+```
 
 ## Development
 
