@@ -1,6 +1,6 @@
 {
   "name": "sortifiler-cli",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "license": "GPL-3.0",
   "description": "Get your files sorted from the command line.",
   "repository": "yougotwill/sortifiler-cli",
